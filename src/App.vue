@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <router-link to="/">
+      <img alt="Vue logo" src="./assets/logo.png">
+    </router-link>
+    <div class="container">
+      <router-view />
+    </div>
+    <div class="container">
+      <ComponentA />
+      <ComponentB />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ComponentA from './components/ComponentA.vue'
+import ComponentB from './components/ComponentB.vue'
+// const ComponentA = () => import(/* webpackChunkName: "component-A" */ './components/ComponentA.vue');
+// const ComponentB = () => import(/* webpackChunkName: "component-B" */ './components/ComponentB.vue');
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ComponentA, 
+    ComponentB
   }
 }
 </script>
@@ -24,5 +36,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+a {
+  color: #41b883;
+  text-decoration: none;
 }
 </style>
