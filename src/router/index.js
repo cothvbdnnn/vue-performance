@@ -11,15 +11,15 @@ export default new Router({
       name: 'home',
       component: () => import(
         /* webpackChunkName: "home" */
-        '../components/home'
+        '../components/Home'
       )
     },
     {
       path: '/category',
       name: 'category',
-      component: () => import( 
+      component: () => import(
         /* webpackChunkName: "categories" */
-        '../components/categories'
+        '../components/Categories'
       )
     }
   ]

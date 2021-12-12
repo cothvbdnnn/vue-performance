@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-     <router-link to="/">
-      <img alt="Vue logo" src="./assets/logo.png">
+    <router-link to="/">
+      <img alt="Vue logo" src="./assets/logo.png" />
     </router-link>
     <div class="container">
       <router-view />
@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import ComponentA from './components/ComponentA.vue'
-import ComponentB from './components/ComponentB.vue'
-// const ComponentA = () => import(/* webpackChunkName: "component-A" */ './components/ComponentA.vue');
-// const ComponentB = () => import(/* webpackChunkName: "component-B" */ './components/ComponentB.vue');
+// import ComponentA from './components/ComponentA.vue'
+// import ComponentB from './components/ComponentB.vue'
+const ComponentA = () => import(/* webpackChunkName: "component-A" */ './components/ComponentA.vue');
+const ComponentB = () => import(/* webpackChunkName: "component-B" */ './components/ComponentB.vue');
 
 export default {
   name: 'App',
