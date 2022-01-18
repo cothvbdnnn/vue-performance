@@ -21,6 +21,14 @@ export default new Router({
         /* webpackChunkName: "categories" */
         '../components/Categories'
       )
+    },
+    {
+      path: '/render-props',
+      name: 'RenderProps',
+      component: () => import(
+        /* webpackChunkName: "categories" */
+        '../components/RenderProps'
+      )
     }
   ]
 })

@@ -2,7 +2,8 @@
   <div>
     <h1>Home</h1>
     <p><a href="javascript:void(0)" @click="handleOpen">Open Dialog</a></p>
-    <router-link to="/category">Go to Category</router-link>
+    <router-link to="/category"><p>Go to Category</p></router-link>
+    <router-link to="/render-props"><p>Render Props</p></router-link>
     <example-dialog v-if="callDialog" ref="dialog" />
   </div>
 </template>

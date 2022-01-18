@@ -6,7 +6,7 @@
     <div class="container">
       <router-view />
     </div>
-    <div class="container">
+    <div v-if="false" class="container">
       <ComponentA />
       <ComponentB />
     </div>
@@ -14,8 +14,6 @@
 </template>
 
 <script>
-// import ComponentA from './components/ComponentA.vue'
-// import ComponentB from './components/ComponentB.vue'
 const ComponentA = () => import(/* webpackChunkName: "component-A" */ './components/ComponentA.vue');
 const ComponentB = () => import(/* webpackChunkName: "component-B" */ './components/ComponentB.vue');
 
